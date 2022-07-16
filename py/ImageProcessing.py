@@ -60,9 +60,11 @@ def get_loading_time(frame_path, target_img, DURATION_OF_VIDEO):
     # print('Target image:: {} '.format(path))
 
     no_of_frames = get_total_frames(folder_path=frame_path)
-    ref_img_position = get_particular_frame_position(no_of_frames, frame_path=frame_path, target_img=target_img)
 
     fps = no_of_frames / int(DURATION_OF_VIDEO)  # (fps = NO_OF_FRAMES/duration_of_video)
+
+    ref_img_position = get_particular_frame_position(no_of_frames, frame_path=frame_path, target_img=target_img)
+
     print('fps: ', fps)
     if fps != 0:
         load_time = ref_img_position / fps
