@@ -56,7 +56,7 @@ def get_particular_frame_position(no_of_frames, frame_path, target_img):
 
 
 def get_loading_time(frame_path, target_img, DURATION_OF_VIDEO):
-    path = frame_path + '/' + target_img
+    # path = frame_path + '/' + target_img
     # print('Target image:: {} '.format(path))
 
     no_of_frames = get_total_frames(folder_path=frame_path)
