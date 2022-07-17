@@ -1,22 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1.3 (Python 3.10.2 on win32)" generated="20220714 16:52:25.914" rpa="false" schemaversion="2">
-<suite id="s1" name="Record Online Youtube Suite" source="E:\Shadow_Project\OTT_video\record_online_youtube_suite.robot">
+<robot generator="Robot 4.1.3 (Python 3.10.2 on win32)" generated="20220717 11:39:04.513" rpa="false" schemaversion="2">
+<suite id="s1" name="Record Online Youtube Suite" source="E:\Shadow_Project\OTT_video_main_robot\record_online_youtube_suite.robot">
 <test id="s1-t1" name="Launch Application And Get App Load Time">
-<kw name="Start Video Recording" library="ScreenCapLibrary">
-<arg>name=Demo</arg>
-<doc>Starts the recording of a video in the background with the specified ``name``.
-The recording can be stopped by calling the `Stop Video Recording` keyword.</doc>
-<msg timestamp="20220714 16:52:28.821" level="INFO">Automatically setting a fps of 14.0</msg>
-<status status="PASS" starttime="20220714 16:52:26.689" endtime="20220714 16:52:28.823"/>
-</kw>
-<kw name="Launch Application" library="CommonFunctionality">
+<kw name="Launch App" library="CommonFunctionality">
 <kw name="Open Application" library="AppiumLibrary">
 <arg>${URL}</arg>
 <arg>platformName=${PLATFORM_NAME}</arg>
 <arg>deviceName=${DEVICE_NAME}</arg>
 <arg>appPackage=${APP_PACKAGE}</arg>
 <arg>appActivity=${APP_ACTIVITY}</arg>
-<arg>automationName=${AUTOMATION_NAME}</arg>
 <arg>adbExecTimeout=90000</arg>
 <doc>Opens a new application to given Appium server.
 Capabilities of appium server, Android and iOS,
@@ -24,75 +16,75 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 | *Option*            | *Man.* | *Description*     |
 | remote_url          | Yes    | Appium server url |
 | alias               | no     | alias             |</doc>
-<status status="PASS" starttime="20220714 16:52:28.826" endtime="20220714 16:52:48.423"/>
+<status status="PASS" starttime="20220717 11:39:05.519" endtime="20220717 11:40:21.525"/>
 </kw>
-<status status="PASS" starttime="20220714 16:52:28.825" endtime="20220714 16:52:48.424"/>
+<status status="PASS" starttime="20220717 11:39:05.519" endtime="20220717 11:40:21.526"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>Starting Recording - Launch App</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220714 16:52:48.426" endtime="20220714 16:52:48.427"/>
+<status status="PASS" starttime="20220717 11:40:21.527" endtime="20220717 11:40:21.529"/>
 </kw>
 <kw name="Start Screen Recording" library="AppiumLibrary">
 <arg>180s</arg>
 <doc>Starts an asynchronous Screen Recording for the current open application.</doc>
-<status status="PASS" starttime="20220714 16:52:48.427" endtime="20220714 16:52:49.270"/>
+<status status="PASS" starttime="20220717 11:40:21.530" endtime="20220717 11:40:23.874"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>Wait for ${timeout}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220714 16:52:49.272" endtime="20220714 16:52:49.273"/>
+<status status="PASS" starttime="20220717 11:40:23.876" endtime="20220717 11:40:23.880"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>${timeout}s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220714 16:53:19.283" level="INFO">Slept 30 seconds</msg>
-<status status="PASS" starttime="20220714 16:52:49.274" endtime="20220714 16:53:19.284"/>
+<msg timestamp="20220717 11:40:53.889" level="INFO">Slept 30 seconds</msg>
+<status status="PASS" starttime="20220717 11:40:23.881" endtime="20220717 11:40:53.889"/>
 </kw>
 <kw name="Stop Screen Recording" library="AppiumLibrary">
 <arg>${EXECDIR}${/}RecordedVideo${/}appLaunch</arg>
 <doc>Gathers the output from the previously started screen recording              to a media file, then embeds it to the log.html(Android Only).</doc>
-<msg timestamp="20220714 16:53:21.904" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="RecordedVideo/appLaunch.mp4"&gt;&lt;video width="800px" controls&gt;&lt;source src="RecordedVideo/appLaunch.mp4" type="video/mp4"&gt;&lt;/video&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20220714 16:53:19.287" endtime="20220714 16:53:21.905"/>
+<msg timestamp="20220717 11:40:57.574" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="RecordedVideo/appLaunch.mp4"&gt;&lt;video width="800px" controls&gt;&lt;source src="RecordedVideo/appLaunch.mp4" type="video/mp4"&gt;&lt;/video&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220717 11:40:53.890" endtime="20220717 11:40:57.574"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>Recording Done</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220714 16:53:21.907" endtime="20220714 16:53:21.909"/>
+<status status="PASS" starttime="20220717 11:40:57.577" endtime="20220717 11:40:57.579"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>Converting Video To Frame</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220714 16:53:21.910" endtime="20220714 16:53:21.912"/>
+<status status="PASS" starttime="20220717 11:40:57.580" endtime="20220717 11:40:57.583"/>
 </kw>
 <kw name="Convert Video To Frame" library="ImageProcessing">
 <arg>${EXECDIR}${/}RecordedVideo${/}appLaunch.mp4</arg>
 <arg>${EXECDIR}${/}Frame${/}AppLaunchFrame</arg>
-<msg timestamp="20220714 16:53:40.282" level="INFO">Generate 158 no of frames in E:\Shadow_Project\Frame\AppLaunchFrame folder.</msg>
-<status status="PASS" starttime="20220714 16:53:21.914" endtime="20220714 16:53:40.282"/>
+<msg timestamp="20220717 11:41:09.674" level="INFO">Generate 147 no of frames in E:\Shadow_Project\Frame\AppLaunchFrame folder.</msg>
+<status status="PASS" starttime="20220717 11:40:57.583" endtime="20220717 11:41:09.674"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>Conversion of Video Done</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220714 16:53:40.294" endtime="20220714 16:53:40.297"/>
+<status status="PASS" starttime="20220717 11:41:09.675" endtime="20220717 11:41:09.676"/>
 </kw>
 <kw name="Get Loading Time" library="ImageProcessing">
 <var>${apploadtime}</var>
 <arg>${EXECDIR}${/}Frame${/}AppLaunchFrame</arg>
 <arg>120.jpg</arg>
 <arg>${timeout}</arg>
-<msg timestamp="20220714 16:53:52.284" level="INFO">Target Ref path:  E:\Shadow_Project\Frame\AppLaunchFrame/120.jpg
+<msg timestamp="20220717 11:41:18.119" level="INFO">Target Ref path:  E:\Shadow_Project\Frame\AppLaunchFrame/120.jpg
 Frame Match Found at  121  position
-fps:  6.466666666666667</msg>
-<msg timestamp="20220714 16:53:52.285" level="INFO">${apploadtime} = 18.711340206185568</msg>
-<status status="PASS" starttime="20220714 16:53:40.304" endtime="20220714 16:53:52.285"/>
+fps:  6.966666666666667</msg>
+<msg timestamp="20220717 11:41:18.119" level="INFO">${apploadtime} = 17.36842105263158</msg>
+<status status="PASS" starttime="20220717 11:41:09.677" endtime="20220717 11:41:18.119"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>App Load Time- ${apploadtime}s</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220714 16:53:52.291" endtime="20220714 16:53:52.292"/>
+<status status="PASS" starttime="20220717 11:41:18.120" endtime="20220717 11:41:18.122"/>
 </kw>
-<status status="PASS" starttime="20220714 16:52:26.688" endtime="20220714 16:53:52.293"/>
+<status status="PASS" starttime="20220717 11:39:05.507" endtime="20220717 11:41:18.123"/>
 </test>
 <test id="s1-t2" name="Record Video Content And Get Video Start Time">
 <kw name="Navigate To Video Using Search Query" library="youtube_home">
@@ -101,33 +93,33 @@ fps:  6.466666666666667</msg>
 <arg>${SEARCH_ICON_LOCATOR}</arg>
 <arg>timeout=20s</arg>
 <doc>Waits until element specified with `locator` appears on current page.</doc>
-<status status="PASS" starttime="20220714 16:53:52.300" endtime="20220714 16:53:58.877"/>
+<status status="PASS" starttime="20220717 11:41:18.131" endtime="20220717 11:41:22.146"/>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <arg>${SEARCH_ICON_LOCATOR}</arg>
 <doc>Click element identified by `locator`.</doc>
-<msg timestamp="20220714 16:53:58.883" level="INFO">Clicking element 'xpath=//android.widget.ImageView[@content-desc="Search"]'.</msg>
-<status status="PASS" starttime="20220714 16:53:58.878" endtime="20220714 16:54:01.006"/>
+<msg timestamp="20220717 11:41:22.154" level="INFO">Clicking element 'xpath=//android.widget.ImageView[@content-desc="Search"]'.</msg>
+<status status="PASS" starttime="20220717 11:41:22.146" endtime="20220717 11:41:23.571"/>
 </kw>
 <kw name="Wait Until Page Contains Element" library="AppiumLibrary">
 <arg>${SEARCH_EDIT_TEXT_LOCATOR}</arg>
 <arg>20s</arg>
 <doc>Waits until element specified with `locator` appears on current page.</doc>
-<status status="PASS" starttime="20220714 16:54:01.008" endtime="20220714 16:54:03.593"/>
+<status status="PASS" starttime="20220717 11:41:23.572" endtime="20220717 11:41:26.405"/>
 </kw>
 <kw name="Input Text" library="AppiumLibrary">
 <arg>${SEARCH_EDIT_TEXT_LOCATOR}</arg>
 <arg>${query}</arg>
 <doc>Types the given `text` into text field identified by `locator`.</doc>
-<msg timestamp="20220714 16:54:03.600" level="INFO">Typing text 'floatinurboat ncs' into text field 'id=com.google.android.youtube:id/search_edit_text'</msg>
-<status status="PASS" starttime="20220714 16:54:03.593" endtime="20220714 16:54:10.753"/>
+<msg timestamp="20220717 11:41:26.413" level="INFO">Typing text 'floatinurboat ncs' into text field 'id=com.google.android.youtube:id/search_edit_text'</msg>
+<status status="PASS" starttime="20220717 11:41:26.405" endtime="20220717 11:41:27.192"/>
 </kw>
 <kw name="Send" library="AutoItLibrary">
 <arg>{ENTER}</arg>
 <doc>method Send</doc>
-<status status="PASS" starttime="20220714 16:54:10.753" endtime="20220714 16:54:10.765"/>
+<status status="PASS" starttime="20220717 11:41:27.193" endtime="20220717 11:41:27.223"/>
 </kw>
-<status status="PASS" starttime="20220714 16:53:52.299" endtime="20220714 16:54:10.766"/>
+<status status="PASS" starttime="20220717 11:41:18.130" endtime="20220717 11:41:27.223"/>
 </kw>
 <kw name="Click on Video Title" library="youtube_home">
 <arg>floatinurboat</arg>
@@ -135,209 +127,193 @@ fps:  6.466666666666667</msg>
 <arg>//android.view.ViewGroup[contains(@content-desc,'${text}')]</arg>
 <arg>180s</arg>
 <doc>Waits until element specified with `locator` appears on current page.</doc>
-<status status="PASS" starttime="20220714 16:54:10.770" endtime="20220714 16:55:22.429"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>3s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220714 16:55:25.445" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20220714 16:55:22.429" endtime="20220714 16:55:25.445"/>
+<status status="PASS" starttime="20220717 11:41:27.227" endtime="20220717 11:41:35.013"/>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <arg>//android.view.ViewGroup[contains(@content-desc,'${text}')]</arg>
 <doc>Click element identified by `locator`.</doc>
-<msg timestamp="20220714 16:55:25.452" level="INFO">Clicking element '//android.view.ViewGroup[contains(@content-desc,'floatinurboat')]'.</msg>
-<status status="PASS" starttime="20220714 16:55:25.445" endtime="20220714 16:55:25.809"/>
+<msg timestamp="20220717 11:41:35.018" level="INFO">Clicking element '//android.view.ViewGroup[contains(@content-desc,'floatinurboat')]'.</msg>
+<status status="PASS" starttime="20220717 11:41:35.013" endtime="20220717 11:41:36.966"/>
 </kw>
-<status status="PASS" starttime="20220714 16:54:10.769" endtime="20220714 16:55:25.809"/>
+<status status="PASS" starttime="20220717 11:41:27.225" endtime="20220717 11:41:36.967"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>Starting Recording - Video playback</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220714 16:55:25.812" endtime="20220714 16:55:25.815"/>
+<status status="PASS" starttime="20220717 11:41:36.968" endtime="20220717 11:41:36.970"/>
 </kw>
 <kw name="Start Screen Recording" library="AppiumLibrary">
 <arg>180s</arg>
 <doc>Starts an asynchronous Screen Recording for the current open application.</doc>
-<status status="PASS" starttime="20220714 16:55:25.818" endtime="20220714 16:55:28.382"/>
+<status status="PASS" starttime="20220717 11:41:36.971" endtime="20220717 11:41:39.148"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>Video is playing for ${timeout}s</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220714 16:55:28.393" endtime="20220714 16:55:28.394"/>
+<status status="PASS" starttime="20220717 11:41:39.151" endtime="20220717 11:41:39.153"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>${timeout}s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220714 16:55:58.397" level="INFO">Slept 30 seconds</msg>
-<status status="PASS" starttime="20220714 16:55:28.395" endtime="20220714 16:55:58.397"/>
+<msg timestamp="20220717 11:42:09.164" level="INFO">Slept 30 seconds</msg>
+<status status="PASS" starttime="20220717 11:41:39.154" endtime="20220717 11:42:09.164"/>
 </kw>
 <kw name="Stop Screen Recording" library="AppiumLibrary">
 <arg>${EXECDIR}${/}RecordedVideo${/}youtubeVideo</arg>
 <doc>Gathers the output from the previously started screen recording              to a media file, then embeds it to the log.html(Android Only).</doc>
-<msg timestamp="20220714 16:56:01.057" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="RecordedVideo/youtubeVideo.mp4"&gt;&lt;video width="800px" controls&gt;&lt;source src="RecordedVideo/youtubeVideo.mp4" type="video/mp4"&gt;&lt;/video&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20220714 16:55:58.399" endtime="20220714 16:56:01.059"/>
+<msg timestamp="20220717 11:42:14.446" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="RecordedVideo/youtubeVideo.mp4"&gt;&lt;video width="800px" controls&gt;&lt;source src="RecordedVideo/youtubeVideo.mp4" type="video/mp4"&gt;&lt;/video&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220717 11:42:09.165" endtime="20220717 11:42:14.448"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>Recording Done</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220714 16:56:01.059" endtime="20220714 16:56:01.064"/>
+<status status="PASS" starttime="20220717 11:42:14.449" endtime="20220717 11:42:14.451"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>Converting Video To Frame</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220714 16:56:01.065" endtime="20220714 16:56:01.067"/>
+<status status="PASS" starttime="20220717 11:42:14.452" endtime="20220717 11:42:14.453"/>
 </kw>
 <kw name="Convert Video To Frame" library="ImageProcessing">
 <arg>${EXECDIR}${/}RecordedVideo${/}youtubeVideo.mp4</arg>
 <arg>${EXECDIR}${/}Frame${/}VideoContentFrame</arg>
-<msg timestamp="20220714 16:56:18.489" level="INFO">Generate 149 no of frames in E:\Shadow_Project\Frame\VideoContentFrame folder.</msg>
-<status status="PASS" starttime="20220714 16:56:01.068" endtime="20220714 16:56:18.490"/>
+<msg timestamp="20220717 11:42:33.211" level="INFO">Generate 197 no of frames in E:\Shadow_Project\Frame\VideoContentFrame folder.</msg>
+<status status="PASS" starttime="20220717 11:42:14.454" endtime="20220717 11:42:33.211"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>Conversion of Video Done</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220714 16:56:18.523" endtime="20220714 16:56:18.538"/>
+<status status="PASS" starttime="20220717 11:42:33.212" endtime="20220717 11:42:33.213"/>
 </kw>
 <kw name="Get Loading Time" library="ImageProcessing">
 <var>${videostarttime}</var>
 <arg>${EXECDIR}${/}Frame${/}VideoContentFrame</arg>
 <arg>160.jpg</arg>
 <arg>${timeout}</arg>
-<msg timestamp="20220714 16:56:34.896" level="INFO">Target Ref path:  E:\Shadow_Project\Frame\VideoContentFrame/160.jpg
+<msg timestamp="20220717 11:42:44.398" level="INFO">Target Ref path:  E:\Shadow_Project\Frame\VideoContentFrame/160.jpg
 Frame Match Found at  161  position
-fps:  6.533333333333333</msg>
-<msg timestamp="20220714 16:56:34.896" level="INFO">${videostarttime} = 24.642857142857142</msg>
-<status status="PASS" starttime="20220714 16:56:18.566" endtime="20220714 16:56:34.897"/>
+fps:  6.566666666666666</msg>
+<msg timestamp="20220717 11:42:44.398" level="INFO">${videostarttime} = 24.51776649746193</msg>
+<status status="PASS" starttime="20220717 11:42:33.213" endtime="20220717 11:42:44.398"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>Video Start Time- ${videostarttime}s</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220714 16:56:34.898" endtime="20220714 16:56:34.899"/>
+<status status="PASS" starttime="20220717 11:42:44.399" endtime="20220717 11:42:44.401"/>
 </kw>
-<status status="PASS" starttime="20220714 16:53:52.297" endtime="20220714 16:56:34.900"/>
+<status status="PASS" starttime="20220717 11:41:18.129" endtime="20220717 11:42:44.405"/>
 </test>
 <test id="s1-t3" name="Record Navigation And Get Navigation Start Time">
 <kw name="Sleep" library="BuiltIn">
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220714 16:56:36.914" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20220714 16:56:34.905" endtime="20220714 16:56:36.914"/>
+<msg timestamp="20220717 11:42:46.415" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220717 11:42:44.411" endtime="20220717 11:42:46.415"/>
 </kw>
 <kw name="Go Back" library="AppiumLibrary">
 <doc>Goes one step backward in the browser history.</doc>
-<status status="PASS" starttime="20220714 16:56:36.915" endtime="20220714 16:56:38.326"/>
+<status status="PASS" starttime="20220717 11:42:46.416" endtime="20220717 11:42:48.480"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220714 16:56:40.345" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20220714 16:56:38.330" endtime="20220714 16:56:40.345"/>
+<msg timestamp="20220717 11:42:50.493" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220717 11:42:48.483" endtime="20220717 11:42:50.494"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>Going Back</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220714 16:56:40.346" endtime="20220714 16:56:40.348"/>
+<status status="PASS" starttime="20220717 11:42:50.495" endtime="20220717 11:42:50.497"/>
 </kw>
 <kw name="Wait Until Page Contains Element" library="AppiumLibrary">
 <arg>//android.widget.Button[@content-desc="Shorts"]</arg>
 <arg>30s</arg>
 <doc>Waits until element specified with `locator` appears on current page.</doc>
-<status status="PASS" starttime="20220714 16:56:40.349" endtime="20220714 16:56:42.528"/>
+<status status="PASS" starttime="20220717 11:42:50.498" endtime="20220717 11:43:23.410"/>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <arg>//android.widget.Button[@content-desc="Shorts"]</arg>
 <doc>Click element identified by `locator`.</doc>
-<msg timestamp="20220714 16:56:42.539" level="INFO">Clicking element '//android.widget.Button[@content-desc="Shorts"]'.</msg>
-<status status="PASS" starttime="20220714 16:56:42.532" endtime="20220714 16:56:49.419"/>
+<msg timestamp="20220717 11:43:23.420" level="INFO">Clicking element '//android.widget.Button[@content-desc="Shorts"]'.</msg>
+<status status="PASS" starttime="20220717 11:43:23.414" endtime="20220717 11:43:25.800"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>Start Recording - Navigation</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220714 16:56:49.426" endtime="20220714 16:56:49.427"/>
+<status status="PASS" starttime="20220717 11:43:25.802" endtime="20220717 11:43:25.804"/>
 </kw>
 <kw name="Start Screen Recording" library="AppiumLibrary">
 <arg>180s</arg>
 <doc>Starts an asynchronous Screen Recording for the current open application.</doc>
-<status status="PASS" starttime="20220714 16:56:49.429" endtime="20220714 16:56:53.446"/>
+<status status="PASS" starttime="20220717 11:43:25.805" endtime="20220717 11:43:32.193"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>wait for ${timeout}s</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220714 16:56:53.448" endtime="20220714 16:56:53.451"/>
+<status status="PASS" starttime="20220717 11:43:32.195" endtime="20220717 11:43:32.196"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>${timeout}s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220714 16:57:23.460" level="INFO">Slept 30 seconds</msg>
-<status status="PASS" starttime="20220714 16:56:53.453" endtime="20220714 16:57:23.460"/>
+<msg timestamp="20220717 11:44:02.200" level="INFO">Slept 30 seconds</msg>
+<status status="PASS" starttime="20220717 11:43:32.199" endtime="20220717 11:44:02.200"/>
 </kw>
 <kw name="Stop Screen Recording" library="AppiumLibrary">
 <arg>${EXECDIR}${/}RecordedVideo${/}Navigation</arg>
 <doc>Gathers the output from the previously started screen recording              to a media file, then embeds it to the log.html(Android Only).</doc>
-<msg timestamp="20220714 16:57:28.300" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="RecordedVideo/Navigation.mp4"&gt;&lt;video width="800px" controls&gt;&lt;source src="RecordedVideo/Navigation.mp4" type="video/mp4"&gt;&lt;/video&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20220714 16:57:23.461" endtime="20220714 16:57:28.302"/>
+<msg timestamp="20220717 11:44:07.264" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="RecordedVideo/Navigation.mp4"&gt;&lt;video width="800px" controls&gt;&lt;source src="RecordedVideo/Navigation.mp4" type="video/mp4"&gt;&lt;/video&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220717 11:44:02.202" endtime="20220717 11:44:07.265"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>Stop</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220714 16:57:28.337" endtime="20220714 16:57:28.340"/>
+<status status="PASS" starttime="20220717 11:44:07.291" endtime="20220717 11:44:07.294"/>
 </kw>
 <kw name="Convert Video To Frame" library="ImageProcessing">
 <arg>${EXECDIR}${/}RecordedVideo${/}Navigation.mp4</arg>
 <arg>${EXECDIR}${/}Frame${/}NavigationFrame</arg>
-<msg timestamp="20220714 16:57:43.510" level="INFO">Generate 113 no of frames in E:\Shadow_Project\Frame\NavigationFrame folder.</msg>
-<status status="PASS" starttime="20220714 16:57:28.341" endtime="20220714 16:57:43.510"/>
+<msg timestamp="20220717 11:44:15.919" level="INFO">Generate 84 no of frames in E:\Shadow_Project\Frame\NavigationFrame folder.</msg>
+<status status="PASS" starttime="20220717 11:44:07.294" endtime="20220717 11:44:15.919"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>Conversion of Video Done</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220714 16:57:43.531" endtime="20220714 16:57:43.537"/>
+<status status="PASS" starttime="20220717 11:44:15.920" endtime="20220717 11:44:15.921"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>Calculating Navigation Starting Time</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220714 16:57:43.571" endtime="20220714 16:57:43.574"/>
+<status status="PASS" starttime="20220717 11:44:15.922" endtime="20220717 11:44:15.923"/>
 </kw>
 <kw name="Get Loading Time" library="ImageProcessing">
 <var>${navtime}</var>
 <arg>${EXECDIR}${/}Frame${/}NavigationFrame</arg>
 <arg>80.jpg</arg>
 <arg>${timeout}</arg>
-<msg timestamp="20220714 16:57:52.587" level="INFO">Target Ref path:  E:\Shadow_Project\Frame\NavigationFrame/80.jpg
-Frame Match Found at  81  position
+<msg timestamp="20220717 11:44:20.731" level="INFO">Target Ref path:  E:\Shadow_Project\Frame\NavigationFrame/80.jpg
+Frame Match Found at  65  position
 fps:  4.2</msg>
-<msg timestamp="20220714 16:57:52.587" level="INFO">${navtime} = 19.285714285714285</msg>
-<status status="PASS" starttime="20220714 16:57:43.599" endtime="20220714 16:57:52.587"/>
+<msg timestamp="20220717 11:44:20.731" level="INFO">${navtime} = 15.476190476190476</msg>
+<status status="PASS" starttime="20220717 11:44:15.924" endtime="20220717 11:44:20.731"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>Navigation Time- ${navtime}s</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220714 16:57:52.590" endtime="20220714 16:57:52.591"/>
+<status status="PASS" starttime="20220717 11:44:20.732" endtime="20220717 11:44:20.733"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>10s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220714 16:58:02.605" level="INFO">Slept 10 seconds</msg>
-<status status="PASS" starttime="20220714 16:57:52.594" endtime="20220714 16:58:02.605"/>
-</kw>
-<kw name="Stop Video Recording" library="ScreenCapLibrary">
-<doc>Stops the video recording corresponding to the given ``alias`` and generates the file in WebM format. If no
-``alias`` is specified, the last opened recording will be closed. If there are more recordings with the same
-alias all of them will be closed. If ``embed`` argument was set to
-``True`` the video will be displayed in the log file.
-Furthermore, if the ``save_to_disk`` parameter is set to ``False``, the video will be embedded and available in
-the log file only.</doc>
-<msg timestamp="20220714 16:58:02.665" level="INFO" html="true">&lt;a href="Demo_6.webm"&gt;&lt;video width="800px" autoplay&gt;&lt;source src="Demo_6.webm" type="video/webm"&gt;&lt;/video&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20220714 16:58:02.607" endtime="20220714 16:58:02.665"/>
+<msg timestamp="20220717 11:44:30.735" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20220717 11:44:20.734" endtime="20220717 11:44:30.735"/>
 </kw>
 <kw name="Close Application" library="AppiumLibrary">
 <doc>Closes the current application and also close webdriver session.</doc>
-<status status="PASS" starttime="20220714 16:58:02.666" endtime="20220714 16:58:09.308"/>
+<status status="PASS" starttime="20220717 11:44:30.737" endtime="20220717 11:44:33.854"/>
 </kw>
-<status status="PASS" starttime="20220714 16:56:34.902" endtime="20220714 16:58:09.311"/>
+<status status="PASS" starttime="20220717 11:42:44.409" endtime="20220717 11:44:33.857"/>
 </test>
-<status status="PASS" starttime="20220714 16:52:25.917" endtime="20220714 16:58:09.315"/>
+<status status="PASS" starttime="20220717 11:39:04.517" endtime="20220717 11:44:33.862"/>
 </suite>
 <statistics>
 <total>

@@ -20,7 +20,7 @@ ${navtime}      0
 Launch Application And Get App Load Time
     #Start Video Recording     name=Demo
 
-    Launch Application
+    Launch App
     Log To Console      Starting Recording - Launch App
     Start Screen Recording     180s
     Log To Console    Wait for ${timeout}
@@ -79,7 +79,7 @@ Record Navigation And Get Navigation Start Time
     Stop Screen Recording     ${EXECDIR}${/}RecordedVideo${/}Navigation
     Log To Console    Stop
 
-    Log To Console    Converting Video To Frame
+
     Convert Video To Frame    ${EXECDIR}${/}RecordedVideo${/}Navigation.mp4       ${EXECDIR}${/}Frame${/}NavigationFrame
     Log To Console    Conversion of Video Done
 

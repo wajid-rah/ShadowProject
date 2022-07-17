@@ -30,7 +30,6 @@ Navigate To Video Using Search Query
 Click on Video Title
        [Arguments]    ${text}
        Wait Until Page Contains Element    	//android.view.ViewGroup[contains(@content-desc,'${text}')]   180s
-       Sleep  3s
        Click Element    //android.view.ViewGroup[contains(@content-desc,'${text}')]
 
 #
